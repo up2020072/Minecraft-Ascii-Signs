@@ -1,0 +1,221 @@
+/* Define the font using @font-face */
+@font-face {
+    font-family: 'minecraftfont';
+    src: url('Minecraft.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-image: url('dirt_background.png');
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+#display-modes {
+    margin-right: 20px;
+}
+
+#background-selection {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.colorButton,
+#layerColorDropdowns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: 100%;
+    
+}
+
+.colorButton button,
+#layerColorDropdowns select {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.colorButton button:hover {
+    transform: scale(1.05);
+}
+.colorButton button:active {
+    transform: scale(0.95);
+}
+
+#layerColorDropdowns select {
+    padding: 5px;
+}
+
+#letterGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#letterGrid button,
+#letterGrid div {
+    margin: 5px;
+    position: relative;
+}
+
+#letterGrid .layered-letter {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; 
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#letterGrid .layered-letter:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    transform: translateY(-2px);
+}
+
+#letterGrid .layered-letter div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: 'Helvetica', monospace;
+    background: transparent;
+    white-space: pre-wrap;
+    cursor: pointer;
+    transform: translateY(15%);
+    font-size: 16px; /* Moved from inline style */
+}
+
+#letterGrid .layered-letter div:hover {
+    opacity: 0.8;
+}
+
+label {
+    margin-right: 10px;
+    color: #f0f0f0;
+}
+
+p {
+    color: #f0f0f0;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Added styles to handle display toggling */
+.hidden {
+    display: none !important;
+}
+
+.flex-display {
+    display: flex;
+}
+
+/* Added the overlay class */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Added classes for pointer-events */
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.control-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.toggles {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    align-items: flex-start;
+}
+
+.toggles > div {
+    margin-right: 15px;
+}
+
+#background-selection {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.color-selection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.instructions {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Media query for screens less than or equal to 600px */
+@media (max-width: 600px) {
+    .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggles {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    #background-selection {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .instructions {
+        margin-top: 10px;
+    }
+}
