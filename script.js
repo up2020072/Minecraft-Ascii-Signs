@@ -30,7 +30,8 @@ const materialColorOptions = [
     { name: "Emerald", code: "§q", bgColor: "#47A036", fgColor: "#FFFFFF" },
     { name: "Diamond", code: "§s", bgColor: "#2CBAA8", fgColor: "#000000" },
     { name: "Lapis", code: "§t", bgColor: "#21497B", fgColor: "#FFFFFF" },
-    { name: "Amethyst", code: "§u", bgColor: "#9A5CC6", fgColor: "#FFFFFF" }
+    { name: "Amethyst", code: "§u", bgColor: "#9A5CC6", fgColor: "#FFFFFF" },
+    { name: "Resin", code: "§v", bgColor: "#EB7114", fgColor: "#FFFFFF" }
 ];
 
 let currentColors = [...colorOptions, ...materialColorOptions];
